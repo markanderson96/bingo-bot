@@ -1,3 +1,7 @@
+const four_corners = [
+	[0, 4, 20, 24]
+]
+
 const lines = [
 	[0, 1, 2, 3, 4],
 	[5, 6, 7, 8, 9],
@@ -27,6 +31,7 @@ const full_house = [
 ];
 
 const wins = {
+	"four_corners": four_corners,
     "lines": lines,
     "cross": cross,
     "full_house": full_house

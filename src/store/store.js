@@ -12,6 +12,7 @@ export const store = new Vuex.Store({
 		gameBoxes: [],
 		boxesPlayed: [],
 		isWon: false,
+		corners: false,
 		line: false,
 		cross: false
 	},
@@ -37,21 +38,31 @@ export const store = new Vuex.Store({
 			state.boxesPlayed = [];
 		},
 		setWin(state) {
+			state.corners = false;
 			state.line = false;
 			state.cross = false;
 			state.isWon = true;
 		},
 		unsetWin(state) {
+			state.corners = false;
+			state.line = false;
+			state.cross = false;
+			state.isWon = false;
+		},
+		setCorners(state) {
+			state.corners = true;
 			state.line = false;
 			state.cross = false;
 			state.isWon = false;
 		},
 		setLine(state) {
+			state.corners = false;
 			state.line = true;
 			state.cross = false;
 			state.isWon = false;
 		},
 		setCross(state) {
+			state.corners = false;
 			state.line = false;
 			state.cross = true;
 			state.isWon = false;
@@ -78,7 +89,11 @@ export const store = new Vuex.Store({
 			for (const [key, value] of Object.entries(wins)) {
 				for (const n of Array(Object.keys(value).length).keys()) {
 					if (value[n].every(v => this.state.boxesPlayed.includes(v))) {
-						if (key == "lines"){
+						if (key == "four_corners"){
+							commit("setCorners")
+							break;
+						}
+						else if (key == "lines"){
 							commit("setLine");
 							break;
 						}
