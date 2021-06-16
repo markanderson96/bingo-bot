@@ -4,10 +4,10 @@
       <TopBar @togglenav="navOpen = !navOpen" />
       <SideBar :open="navOpen" />
     </div>
-    <div class="Game">
-      <GameStatus />
+    <div class="game">
       <GameControls />
       <GameBoard />
+      <GameStatus />
     </div>
   </div>
 </template>
@@ -70,6 +70,7 @@ export default {
     position: absolute;
   }
   .game {
-    position: absolute;
+    padding-top: 60px;
+    align-self: center;
   }
 </style>
