@@ -69,14 +69,15 @@ input[type="checkbox"] {
     font-size: 1em;
     padding: 5px;
     border: 5px solid transparent;
+    background-color: var(--color-bg-secondary);
   }
 
   &:checked + label {
-    background: yellow;
+    background: var(--active-color)
   }
 
   &:focus + label {
-    border-color: orange;
+    border-color: var(--focus-color);
   }
 }
 </style>
