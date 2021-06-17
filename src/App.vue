@@ -9,12 +9,16 @@
       <GameBoard />
       <GameStatus />
     </div>
+    <div class="nav">
+      <BottomBar />
+    </div>
   </div>
 </template>
 
 <script>
 import TopBar from './components/nav/TopBar.vue'
 import SideBar from './components/nav/SideBar.vue'
+import BottomBar from './components/nav/BottomBar.vue'
 
 import GameBoard from "./components/bingo/GameBoard"
 import GameControls from "./components/bingo/GameControls"
@@ -29,9 +33,10 @@ export default {
   components: {
     TopBar,
     SideBar,
+    BottomBar,
     GameBoard,
     GameStatus,
-    GameControls
+    GameControls,
   },
   computed: {
     ...mapGetters(["screenAtLeast", "screenUnder"])
@@ -54,14 +59,6 @@ export default {
   * {
     box-sizing: border-box;
   }
-  body {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
   #app {
     width: 100%;
     min-height: 100vh;
@@ -70,7 +67,11 @@ export default {
     position: absolute;
   }
   .game {
+    min-height: 100vh;
     padding-top: 60px;
     align-self: center;
+    background: url('./assets/app_bg.png') center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
   }
 </style>

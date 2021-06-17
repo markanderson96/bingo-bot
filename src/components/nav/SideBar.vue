@@ -43,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
     .sidebar{
+        position: fixed;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -51,7 +52,7 @@ export default {
         width: 60px;
         height: calc(100vh - 50px);
         margin: 0;
-        padding-top: 48px;
+        padding-top: 50px;
         background-color: rgba($color: #242424, $alpha: .6);
 
         .sidebar-element{

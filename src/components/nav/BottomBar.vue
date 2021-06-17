@@ -1,13 +1,5 @@
 <template>
-    <div class="topbar">
-        <div>
-            <fa-icon 
-                class="icon" 
-                :icon="['fas', 'bars']" 
-                size="2x" 
-                @click="$emit('togglenav')" 
-            />
-        </div>
+    <div class="bottombar">
         <div>
             <h1 class="title">its bingo innit</h1>
         </div>
@@ -16,17 +8,17 @@
 
 <script>
 export default {
-    name: 'TopBar',
+    name: 'BottomBar',
 }
 </script>
 
 <style lang="scss" scoped>
-.topbar {
+.bottombar {
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 50px;
+    height: 60px;
     padding: 5px 5px 5px 5px; 
     background-color: #222;
     border-bottom: 1px solid #000;
