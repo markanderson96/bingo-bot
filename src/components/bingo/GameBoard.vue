@@ -6,7 +6,6 @@
         </h1>
         <div class="grid-coord">
             <div class="bingo-letters" aria-hidden="true">
-                <span>&#8203;</span>
                 <span>a</span>
                 <span>b</span>
                 <span>c</span>
@@ -51,37 +50,39 @@ export default {
     margin: 1em auto;
     background-color: var(--color-bg-secondary);
     padding: 1em;
+    color: var(--font-color-primary);
 }
 .game-name {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
+    color: var(--font-color-primary);
 }
 .grid-coord{
-    text-align: left;
-    align-items: left;
+    text-align: center;
     margin-top: 0;
     margin-bottom: 0;
+    color: var(--font-color-primary);
+    span{
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2em;
+        color: var(--font-color-primary);
+    }
 }
 .bingo-letters {
     display: flex;
-    span {
-        flex: 1;
-        font-weight: bold;
-        font-size: 2em;
-    }
+    margin-left: 41px;
+    width: 556px;
 }
 .bingo-numbers{
     display: flex;
     flex-direction: column;
     float: left;
-    text-align: top;
-    align-items: top;
-    height: 560px;
-    span {
-        flex: 1;
-        font-weight: bold;
-        font-size: 2em;
+    height: 556px;
+    span{
+        line-height: 112px;
     }
 }
 .game-grid {
@@ -93,6 +94,7 @@ export default {
     grid-template-rows: repeat(5, 1fr);
     grid-auto-flow: column;
     width: 90%;
+    color: var(--font-color-primary);
     &::before {
         content: "";
         width: 0;
