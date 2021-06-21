@@ -27,6 +27,7 @@ export const store = new Vuex.Store({
 			let shuffledOptions = shuffle(state.currentTheme.options.slice());
 			// select only 25 values
 			state.gameBoxes = shuffledOptions.slice(0, 25);
+			state.boxesPlayed.push(12);
 		},
 		addBox(state, id) {
 			state.boxesPlayed.push(id);
