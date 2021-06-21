@@ -4,8 +4,8 @@
             <option disabled value>theme</option>
             <option v-for="(name, index) of themeNames" :key="index" :value="name">{{ name }}</option>
         </select>
-        <button @click="setCard" :disabled="hasNoTheme">new card</button>
-        <button class="clearBtn" @click="clearCard" :disabled="isClearCard">clear card</button>
+        <button class="btn" @click="setCard" :disabled="hasNoTheme">new card</button>
+        <button class="btn" @click="clearCard" :disabled="isClearCard">clear card</button>
     </div>
 </template>
 
@@ -74,12 +74,36 @@ export default {
 
 <style lang="scss" scoped>
 .game-controls {
-  text-align: center;
+    text-align: center;
+    color: var(--font-color-primary)
 }
 
 .select-css {
     font-size: 16px;
+    height: 24px;
     font-weight: 400;
     vertical-align: middle;
+    color: var(--font-color-primary);
+    select {
+        display: none; /*hide original SELECT element: */
+        background-color: dimgrey;
+    }
+    option {
+        color: var(--font-primary-color);
+        background-color: darkgrey;
+    }
+}
+
+.button {
+    color: var(--font-color-primary);
+    background-color: dimgrey;
+}
+
+.btn {
+    background-color: darkgrey;
+    color: var(--font-color-primary);
+}
+.btn:disabled {
+    background-color: dimgrey;
 }
 </style>
