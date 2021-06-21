@@ -1,7 +1,9 @@
 <template>
     <div class="bottombar">
         <div>
-            <h1 class="title">designed by mark (sirwhy)</h1>
+            <h1 class="title">
+                <a href="https://markanderson96.github.io">designed by mark (sirwhy)</a>
+            </h1>  
         </div>
         <div>
             <h1 class="title">beta version 0.2</h1>
@@ -33,6 +35,9 @@ export default {
         margin-top: 0;
         margin-right: 16px;
         color: var(--font-color-secondary);
+        a {
+            text-decoration: none;
+        }
     }
     .icon {
         cursor: pointer;
