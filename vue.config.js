@@ -1,4 +1,7 @@
 module.exports = {
+	devServer: {
+		https: false
+	},
 	css: {
 		loaderOptions: {
 			sass: {
