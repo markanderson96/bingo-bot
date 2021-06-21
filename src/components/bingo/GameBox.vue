@@ -50,6 +50,7 @@ export default {
   width: 100%;
   border: 1px solid;
   overflow: hidden;
+  color: var(--font-color-primary)
 }
 
 input[type="checkbox"] {
@@ -70,6 +71,7 @@ input[type="checkbox"] {
     padding: 5px;
     border: 5px solid transparent;
     background-color: var(--color-bg-secondary);
+    color: var(--font-color-primary)
   }
 
   &:checked + label {
