@@ -51,7 +51,7 @@ export default {
         flex-direction: column;
         width: 60px;
         height: calc(100vh - 50px);
-        margin: 0;
+        margin-top: 50px;
         padding-top: 50px;
         background-color: rgba($color: #242424, $alpha: .6);
 
