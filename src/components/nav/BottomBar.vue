@@ -1,7 +1,10 @@
 <template>
     <div class="bottombar">
         <div>
-            <h1 class="title">its bingo innit</h1>
+            <h1 class="title">designed by mark (sirwhy)</h1>
+        </div>
+        <div>
+            <h1 class="title">beta version 0.2</h1>
         </div>
     </div>
 </template>
@@ -15,6 +18,7 @@ export default {
 <style lang="scss" scoped>
 .bottombar {
     position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
     width: 100vw;
