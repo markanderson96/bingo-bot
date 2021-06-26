@@ -76,8 +76,8 @@ input[type="checkbox"] {
 
   &:checked + label {
     background: var(--active-color);
-    border: 5px solid transparent;
-    border-color: black;
+    border: 2px solid transparent;
+    border-color: #E75E43;
     font-weight: bolder;
   }
 
