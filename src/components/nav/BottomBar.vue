@@ -6,7 +6,7 @@
             </h1>  
         </div>
         <div>
-            <h1 class="title">beta version 0.2.1</h1>
+            <h1 class="title">beta version 0.2.3</h1>
         </div>
     </div>
 </template>
